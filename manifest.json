@@ -1,0 +1,21 @@
+{
+  "name": "FlowQuran Murottal",
+  "short_name": "FlowQuran",
+  "description": "Seamless Murottal Player with Advanced Features",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192/0a0a0a/38bdf8?text=FQ",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512/0a0a0a/38bdf8?text=FQ",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
