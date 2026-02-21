@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowQuran | The Ultimate Murottal Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="brand">FlowQuran</h1>
+            <p class="subtitle">Ketenangan di Setiap Ayat</p>
+        </header>
+
+        <main class="player-card glass">
+            <div class="status-bar">
+                <span id="battery-warning" class="hidden">🔋 Baterai Lemah</span>
+                <span id="prayer-warning" class="hidden">🕌 Waktu Sholat</span>
+            </div>
+
+            <h2 class="juz-title">Juz <span id="juz-number">1</span></h2>
+            
+            <div class="progress-wrapper">
+                <input type="range" id="seek-bar" value="0" min="0" step="1">
+                <div class="time-flex">
+                    <span id="current-time">00:00</span>
+                    <span id="duration">00:00</span>
+                </div>
+            </div>
+
+            <div class="main-controls">
+                <button id="btn-prev" class="icon-btn" title="Sebelumnya (P)">⏮</button>
+                <button id="btn-play" class="play-btn" title="Play/Pause (Spasi)">▶</button>
+                <button id="btn-next" class="icon-btn" title="Selanjutnya (N)">⏭</button>
+            </div>
+
+            <div class="secondary-controls">
+                <button id="btn-bookmark" class="text-btn">📌 Pin Detik Ini</button>
+                <select id="speed-control" class="glass-select">
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1.0x Normal</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                </select>
+                <button id="btn-settings" class="text-btn">⚙️ Pengaturan</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="settings-panel" class="settings-modal hidden">
+        <div class="settings-content glass">
+            <div class="settings-header">
+                <h3>Fitur FlowQuran</h3>
+                <button id="btn-close-settings">✖</button>
+            </div>
+            
+            <div class="settings-list">
+                <label class="toggle-row">
+                    <span>Smart Buffering (Anti Macet)</span>
+                    <input type="checkbox" id="set-buffering" checked>
+                </label>
+                <label class="toggle-row">
+                    <span>Audio Level Normalization</span>
+                    <input type="checkbox" id="set-normalize" checked>
+                </label>
+                <label class="toggle-row">
+                    <span>Multi-Tab Prevention</span>
+                    <input type="checkbox" id="set-multitab" checked>
+                </label>
+                <label class="toggle-row">
+                    <span>Prayer Times Ducking</span>
+                    <input type="checkbox" id="set-prayer" checked>
+                </label>
+                <hr>
+                <label class="toggle-row">
+                    <span>Sleep Fade-Out</span>
+                    <input type="checkbox" id="set-sleep">
+                </label>
+                <label class="toggle-row">
+                    <span>Adaptive Bitrate (Hemat Kuota)</span>
+                    <input type="checkbox" id="set-bitrate">
+                </label>
+                <label class="toggle-row">
+                    <span>Battery Saver Mode</span>
+                    <input type="checkbox" id="set-battery">
+                </label>
+                <label class="toggle-row">
+                    <span>Night-Shift Audio (Warm Sound)</span>
+                    <input type="checkbox" id="set-nightshift">
+                </label>
+                <label class="toggle-row">
+                    <span>Smart Silences Remover</span>
+                    <input type="checkbox" id="set-silence">
+                </label>
+                
+                <hr>
+                <div class="ambient-control">
+                    <span>Suara Alam (Ambient)</span>
+                    <input type="checkbox" id="set-ambient">
+                    <input type="range" id="ambient-vol" min="0" max="1" step="0.1" value="0.2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="audio-engine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
