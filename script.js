@@ -1,6 +1,6 @@
 // --- 1. DATA JUZ (Ganti dengan Link Asli Nanti) ---
 const juzList = [
-    "https://server8.mp3quran.net/afs/001.mp3", // Juz 1
+    "https://ia801804.us.archive.org/11/items/MisharyRasyidPerJuz/Mishary/01.mp3", // Juz 1
     "https://server8.mp3quran.net/afs/112.mp3", // Juz 2 (Placeholder)
     "https://server8.mp3quran.net/afs/113.mp3"  // Juz 3 (Placeholder)
 ]; // Lengkapi sampai 30
